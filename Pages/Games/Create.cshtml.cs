@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using GameCollection.Model;
 using GameCollection.Models;
 
+
+//local 1
 namespace GameCollection.Pages.Games
 {
     public class CreateModel : PageModel
