@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using GameCollection.Model;
 using GameCollection.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GameCollection.Pages.Games
 {
+    [Authorize]
     public class DeleteModel : PageModel
     {
         private readonly GameCollection.Models.GameCollectionContext _context;

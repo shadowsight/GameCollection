@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GameCollection.Model;
 using GameCollection.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GameCollection.Pages.Games
 {
+    [Authorize]
     public class EditModel : PageModel
     {
         private readonly GameCollection.Models.GameCollectionContext _context;
