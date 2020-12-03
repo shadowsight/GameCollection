@@ -24,7 +24,6 @@ namespace GameCollection.Areas.Identity.Pages.Account.Manage
         }
 
         public string Username { get; set; }
-
  
 
         [TempData]
@@ -47,12 +46,14 @@ namespace GameCollection.Areas.Identity.Pages.Account.Manage
         {
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+            var name = user.Name;
 
             Username = userName;
 
             Input = new InputModel
             {
-                PhoneNumber = phoneNumber
+                PhoneNumber = phoneNumber,
+                Name = name
             };
         }
 
