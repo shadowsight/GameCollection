@@ -46,11 +46,6 @@ namespace GameCollection.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [StringLength(50)]
-            [Display(Name = "Name")]
-            public string Name { get; set; }
-
-            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
