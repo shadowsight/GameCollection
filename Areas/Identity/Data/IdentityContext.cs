@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GameCollection.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameCollection.Data
 {
-    public class IdentityContext : IdentityDbContext<IdentityUser>
+    public class IdentityContext : IdentityDbContext<ApplicationUser>
     {
         public IdentityContext(DbContextOptions<IdentityContext> options)
             : base(options)
