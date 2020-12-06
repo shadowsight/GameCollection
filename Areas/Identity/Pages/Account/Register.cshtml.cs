@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using GameCollection.Areas.Identity.Data;
+using System.Security.Claims;
 
 namespace GameCollection.Areas.Identity.Pages.Account
 {
@@ -85,6 +86,9 @@ namespace GameCollection.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
+
+                    //ADD CLAIM HERE!!!!
+                    //await _userManager.AddClaimAsync(user, new Claim("Name", user.Name));
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
