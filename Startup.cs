@@ -27,12 +27,11 @@ namespace GameCollection
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<GameCollectionContext>(options =>
-               options.UseSqlServer(
-                    Configuration["Data:GameCollection:ConnectionString"]));
+              options.UseSqlServer(Configuration.GetConnectionString("GameCollectionContext")));
 
             services.AddDbContext<IdentityContext>(options =>
-                options.UseSqlServer(
-                    Configuration["Data:GameCollection:ConnectionString"]));
+              options.UseSqlServer(Configuration.GetConnectionString("GameCollectionContext")));
+
             services.AddRazorPages();
             services.AddMvc();
 

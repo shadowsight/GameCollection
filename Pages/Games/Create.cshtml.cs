@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using GameCollection.Model;
 using GameCollection.Models;
+using Microsoft.AspNetCore.Authorization;
 
 
 //local 1
 namespace GameCollection.Pages.Games
 {
+    [Authorize]
     public class CreateModel : PageModel
     {
         private readonly GameCollection.Models.GameCollectionContext _context;
